@@ -1,0 +1,41 @@
+[user]
+	name = keien
+	email = 1720659422@qq.com
+[push]
+	default = matching
+[difftool "sourcetree"]
+	cmd = 'C:/Program Files (x86)/Beyond Compare 3/BComp.exe' \"$LOCAL\" \"$REMOTE\"
+[mergetool "sourcetree"]
+	cmd = 'C:/Program Files (x86)/Beyond Compare 3/BComp.exe' \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+	trustExitCode = true
+[core]
+	# editor = 'C:/Program Files/Sublime Text 3/sublime_text.exe' -w
+	autocrlf = true
+[credential]
+	helper = wincred
+[alias]
+	ck = checkout
+	cka = checkout --
+	br = branch
+	cm = commit
+	cma = commit --amend
+	me = merge
+	st = status
+	last = log -1 HEAD
+	res = reset --hard HEAD
+	ps = push
+	pl = pull
+	fe = fetch
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	lgl = log --pretty=oneline
+	df = difftool -t sourcetree
+	rg = reflog
+	rb = rebase
+[gui]
+    encoding = UTF-8 #代码库统一用urf-8,在git gui中可以正常显示中文
+[i18n]
+    #commitencoding = GB2312
+    #log编码，window下默认gb2312,声明后发到服务器才不会乱码
+    commitencoding = UTF-8
+[svn]
+    pathnameencoding = UTF-8 #支持中文路径
